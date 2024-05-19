@@ -12,27 +12,61 @@ struct ContentView: View {
     @State private var usedWords = [String]()
     @State private var rootWord = ""
     @State private var newWord = ""
+    @State private var score = 0
     
     @State private var errorTitle = ""
     @State private var errorMessage = ""
     @State private var showingError = false
     
+    @State private var showingDefinition = false
+    @State private var wordDefinition = ""
+    
     var body: some View {
         NavigationStack {
-            List {
-                Section {
-                    TextField("Enter your word", text: $newWord)
-                        .textInputAutocapitalization(.never)
-                }
+            VStack(alignment: .leading) {
+                Text(rootWord)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .padding([.top, .horizontal])
                 
-                ForEach(usedWords, id: \.self) { word in
+                Text("Score: \(score)")
+                    .font(.title2)
+                    .foregroundColor(.secondary)
+                    .padding([.bottom, .horizontal])
+                
+                VStack(alignment: .leading, spacing: 20) {
+                    Text("Enter a new word")
+                        .font(.headline)
+                    
                     HStack {
-                        Image(systemName: "\(word.count).circle")
-                        Text(word)
+                        TextField("Enter your word", text: $newWord)
+                            .foregroundColor(.primary).opacity(0.8)
+                            .padding(10)
+                            .autocorrectionDisabled(true)
+                            .textInputAutocapitalization(.never)
+                    }
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10.0)
+                            .strokeBorder(.secondary, style: StrokeStyle(lineWidth: 1.0))
+                    )
+                    
+                    Text("Used Words")
+                        .font(.headline)
+                    
+                    ForEach(usedWords, id: \.self) { word in
+                        HStack {
+                            Image(systemName: "\(word.count).circle")
+                                .foregroundColor(.blue)
+                            Text(word)
+                        }
                     }
                 }
+                .padding(.horizontal)
+                
+                Spacer()
             }
-            .navigationTitle(rootWord)
+            .padding()
+            .navigationTitle("WordScrabble")
             .onSubmit(addNewWord)
             .onAppear(perform: startGame)
             .alert(errorTitle, isPresented: $showingError) {
@@ -40,55 +74,56 @@ struct ContentView: View {
             } message: {
                 Text(errorMessage)
             }
-            .toolbar(content: {
-                Button("Start", action: {
-                    usedWords.removeAll()
-                    startGame()
-                })
-            })
+            .alert("Definition", isPresented: $showingDefinition) {
+                Button("OK") { }
+            } message: {
+                Text(wordDefinition)
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("New Game", action: startGame)
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Restart", action: restartGame)
+                }
+            }
         }
     }
     
     func startGame() {
-        // 1. Find the URL for start.txt in our app bundle
         if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
-            // 2. Load start.txt into a string
             if let startWords = try? String(contentsOf: startWordsURL) {
-                // 3. Split the string up into an array of strings, splitting on line breaks
                 let allWords = startWords.components(separatedBy: "\n")
-                
-                // 4. Pick one random word, or use "silkworm" as a sensible default
                 rootWord = allWords.randomElement() ?? "silkworm"
-                
-                // If we are here everything has worked, so we can exit
+                usedWords = []
+                newWord = ""
+                score = 0
                 return
             }
         }
-        
-        // If were are *here* then there was a problem – trigger a crash and report the error
         fatalError("Could not load start.txt from bundle.")
     }
     
+    func restartGame() {
+        usedWords.removeAll()
+        startGame()
+    }
+    
     func addNewWord() {
-        // lowercase and trim the word, to make sure we don't add duplicate words with case differences
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
         
-        // exit if the remaining string is empty
-        guard answer.count > 3 else {
-            wordError(title: "Word is too short", message: "A little longer please")
-            return
-        }
+        guard answer.count > 0 else { return }
         
         guard isOriginal(word: answer) else {
             wordError(title: "Word used already", message: "Be more original")
             return
         }
-
+        
         guard isPossible(word: answer) else {
             wordError(title: "Word not possible", message: "You can't spell that word from '\(rootWord)'!")
             return
         }
-
+        
         guard isReal(word: answer) else {
             wordError(title: "Word not recognized", message: "You can't just make them up, you know!")
             return
@@ -97,6 +132,7 @@ struct ContentView: View {
         withAnimation {
             usedWords.insert(answer, at: 0)
         }
+        score += answer.count
         newWord = ""
     }
     
@@ -106,7 +142,7 @@ struct ContentView: View {
     
     func isPossible(word: String) -> Bool {
         var tempWord = rootWord
-
+        
         for letter in word {
             if let pos = tempWord.firstIndex(of: letter) {
                 tempWord.remove(at: pos)
@@ -114,7 +150,7 @@ struct ContentView: View {
                 return false
             }
         }
-
+        
         return true
     }
     
@@ -122,7 +158,7 @@ struct ContentView: View {
         let checker = UITextChecker()
         let range = NSRange(location: 0, length: word.utf16.count)
         let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
-
+        
         return misspelledRange.location == NSNotFound
     }
     

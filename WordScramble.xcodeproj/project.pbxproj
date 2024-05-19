@@ -12,6 +12,7 @@
 		B1FDF0672BFA5BB800A3B396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FDF0662BFA5BB800A3B396 /* Assets.xcassets */; };
 		B1FDF06A2BFA5BB800A3B396 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FDF0692BFA5BB800A3B396 /* Preview Assets.xcassets */; };
 		B1FDF0712BFA613B00A3B396 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = B1FDF0702BFA613B00A3B396 /* start.txt */; };
+		B1FDF0732BFA6D2800A3B396 /* DictionaryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0722BFA6D2800A3B396 /* DictionaryApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		B1FDF0662BFA5BB800A3B396 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1FDF0692BFA5BB800A3B396 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B1FDF0702BFA613B00A3B396 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
+		B1FDF0722BFA6D2800A3B396 /* DictionaryApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				B1FDF0622BFA5BB500A3B396 /* WordScrambleApp.swift */,
 				B1FDF0642BFA5BB500A3B396 /* ContentView.swift */,
+				B1FDF0722BFA6D2800A3B396 /* DictionaryApi.swift */,
 				B1FDF0662BFA5BB800A3B396 /* Assets.xcassets */,
 				B1FDF0682BFA5BB800A3B396 /* Preview Content */,
 			);
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1FDF0732BFA6D2800A3B396 /* DictionaryApi.swift in Sources */,
 				B1FDF0652BFA5BB500A3B396 /* ContentView.swift in Sources */,
 				B1FDF0632BFA5BB500A3B396 /* WordScrambleApp.swift in Sources */,
 			);
