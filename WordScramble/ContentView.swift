@@ -21,6 +21,8 @@ struct ContentView: View {
     @State private var showingDefinition = false
     @State private var wordDefinition = ""
     
+    let dictionaryAPI = DictionaryAPI()
+    
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
@@ -58,6 +60,9 @@ struct ContentView: View {
                             Image(systemName: "\(word.count).circle")
                                 .foregroundColor(.blue)
                             Text(word)
+                                .onTapGesture {
+                                    fetchDefinition(for: word)
+                                }
                         }
                     }
                 }
@@ -166,6 +171,20 @@ struct ContentView: View {
         errorTitle = title
         errorMessage = message
         showingError = true
+    }
+    
+    func fetchDefinition(for word: String) {
+        dictionaryAPI.fetchDefinition(for: word) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let definition):
+                    wordDefinition = definition
+                    showingDefinition = true
+                case .failure(let error):
+                    wordError(title: "Definition not found", message: error.localizedDescription)
+                }
+            }
+        }
     }
 }
 
