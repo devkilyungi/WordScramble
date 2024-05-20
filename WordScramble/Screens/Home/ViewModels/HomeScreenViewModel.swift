@@ -51,6 +51,13 @@ class HomeScreenViewModel: ObservableObject {
         fatalError("Could not load start.txt from bundle.")
     }
     
+    func quitGame() {
+        gameStarted = false
+        gameEnded = true
+        shouldFocus = false
+        stopTimer()
+    }
+    
     func restartGame() {
         withAnimation {
             usedWords.removeAll()
@@ -171,6 +178,10 @@ class HomeScreenViewModel: ObservableObject {
                     self.timer?.cancel()
                 }
             }
+    }
+    
+    func stopTimer() {
+        timer?.cancel()
     }
     
     var formattedTimeRemaining: String {

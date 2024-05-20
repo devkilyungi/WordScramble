@@ -29,5 +29,14 @@ struct TextFieldSectionView: View {
             RoundedRectangle(cornerRadius: 10.0)
                 .strokeBorder(.secondary, style: StrokeStyle(lineWidth: 1.0))
         )
+        .toolbar {
+            ToolbarItemGroup(placement: .keyboard) {
+                Spacer()
+                Button("Quit") {
+                    viewModel.quitGame()
+                    isTextFieldFocused = false
+                }
+            }
+        }
     }
 }
