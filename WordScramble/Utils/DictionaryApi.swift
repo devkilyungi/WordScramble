@@ -7,6 +7,16 @@
 
 import Foundation
 
+struct WordDefinition: Codable {
+    struct Meaning: Codable {
+        struct Definition: Codable {
+            let definition: String
+        }
+        let definitions: [Definition]
+    }
+    let meanings: [Meaning]?
+}
+
 struct DictionaryAPI {
     func fetchDefinition(for word: String, completion: @escaping (Result<String, Error>) -> Void) {
         let urlString = "https://api.dictionaryapi.dev/api/v2/entries/en/\(word)"
@@ -27,25 +37,13 @@ struct DictionaryAPI {
             }
 
             do {
-                let decodedResponse = try JSONDecoder().decode([WordDefinition].self, from: data)
-                if let definition = decodedResponse.first?.meanings.first?.definitions.first?.definition {
+                if let decodedResponse = try? JSONDecoder().decode([WordDefinition].self, from: data),
+                   let definition = decodedResponse.first?.meanings?.first?.definitions.first?.definition {
                     completion(.success(definition))
                 } else {
                     completion(.failure(NSError(domain: "No definition found", code: 404, userInfo: nil)))
                 }
-            } catch {
-                completion(.failure(error))
             }
         }.resume()
     }
-}
-
-struct WordDefinition: Codable {
-    struct Meaning: Codable {
-        struct Definition: Codable {
-            let definition: String
-        }
-        let definitions: [Definition]
-    }
-    let meanings: [Meaning]
 }

@@ -13,6 +13,19 @@
 		B1FDF06A2BFA5BB800A3B396 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FDF0692BFA5BB800A3B396 /* Preview Assets.xcassets */; };
 		B1FDF0712BFA613B00A3B396 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = B1FDF0702BFA613B00A3B396 /* start.txt */; };
 		B1FDF0732BFA6D2800A3B396 /* DictionaryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0722BFA6D2800A3B396 /* DictionaryApi.swift */; };
+		B1FDF0762BFB3BB900A3B396 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0752BFB3BB900A3B396 /* Router.swift */; };
+		B1FDF07A2BFB3C7E00A3B396 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0792BFB3C7E00A3B396 /* HomeScreen.swift */; };
+		B1FDF07C2BFB3DAF00A3B396 /* ScoreScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF07B2BFB3DAF00A3B396 /* ScoreScreen.swift */; };
+		B1FDF0842BFB3FC600A3B396 /* CardBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0832BFB3FC600A3B396 /* CardBackground.swift */; };
+		B1FDF0862BFB64A500A3B396 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0852BFB64A500A3B396 /* Utils.swift */; };
+		B1FDF0882BFB64BF00A3B396 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0872BFB64BF00A3B396 /* TimerView.swift */; };
+		B1FDF08D2BFB723A00A3B396 /* AppTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF08C2BFB723A00A3B396 /* AppTitleView.swift */; };
+		B1FDF08F2BFB726800A3B396 /* WordChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF08E2BFB726800A3B396 /* WordChallengeView.swift */; };
+		B1FDF0912BFB73B800A3B396 /* DefinitionLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0902BFB73B800A3B396 /* DefinitionLoaderView.swift */; };
+		B1FDF0932BFB73E700A3B396 /* WordDefinitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0922BFB73E700A3B396 /* WordDefinitionView.swift */; };
+		B1FDF0952BFB747300A3B396 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0942BFB747300A3B396 /* HomeScreenViewModel.swift */; };
+		B1FDF0972BFB762000A3B396 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0962BFB762000A3B396 /* ErrorView.swift */; };
+		B1FDF0992BFB768E00A3B396 /* GameEndedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0982BFB768E00A3B396 /* GameEndedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +36,19 @@
 		B1FDF0692BFA5BB800A3B396 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B1FDF0702BFA613B00A3B396 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 		B1FDF0722BFA6D2800A3B396 /* DictionaryApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryApi.swift; sourceTree = "<group>"; };
+		B1FDF0752BFB3BB900A3B396 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B1FDF0792BFB3C7E00A3B396 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		B1FDF07B2BFB3DAF00A3B396 /* ScoreScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreScreen.swift; sourceTree = "<group>"; };
+		B1FDF0832BFB3FC600A3B396 /* CardBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackground.swift; sourceTree = "<group>"; };
+		B1FDF0852BFB64A500A3B396 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		B1FDF0872BFB64BF00A3B396 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		B1FDF08C2BFB723A00A3B396 /* AppTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTitleView.swift; sourceTree = "<group>"; };
+		B1FDF08E2BFB726800A3B396 /* WordChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordChallengeView.swift; sourceTree = "<group>"; };
+		B1FDF0902BFB73B800A3B396 /* DefinitionLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionLoaderView.swift; sourceTree = "<group>"; };
+		B1FDF0922BFB73E700A3B396 /* WordDefinitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDefinitionView.swift; sourceTree = "<group>"; };
+		B1FDF0942BFB747300A3B396 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		B1FDF0962BFB762000A3B396 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		B1FDF0982BFB768E00A3B396 /* GameEndedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +81,13 @@
 		B1FDF0612BFA5BB500A3B396 /* WordScramble */ = {
 			isa = PBXGroup;
 			children = (
-				B1FDF0622BFA5BB500A3B396 /* WordScrambleApp.swift */,
-				B1FDF0642BFA5BB500A3B396 /* ContentView.swift */,
-				B1FDF0722BFA6D2800A3B396 /* DictionaryApi.swift */,
+				B1FDF0822BFB3FB400A3B396 /* ViewModifiers */,
+				B1FDF0772BFB3C4900A3B396 /* App */,
 				B1FDF0662BFA5BB800A3B396 /* Assets.xcassets */,
 				B1FDF0682BFA5BB800A3B396 /* Preview Content */,
+				B1FDF0742BFB3BA800A3B396 /* Routing */,
+				B1FDF0782BFB3C6500A3B396 /* Screens */,
+				B1FDF07D2BFB3E4D00A3B396 /* Utils */,
 			);
 			path = WordScramble;
 			sourceTree = "<group>";
@@ -71,6 +99,97 @@
 				B1FDF0692BFA5BB800A3B396 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B1FDF0742BFB3BA800A3B396 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				B1FDF0752BFB3BB900A3B396 /* Router.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		B1FDF0772BFB3C4900A3B396 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B1FDF0622BFA5BB500A3B396 /* WordScrambleApp.swift */,
+				B1FDF0642BFA5BB500A3B396 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B1FDF0782BFB3C6500A3B396 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B1FDF07E2BFB3E9400A3B396 /* Home */,
+				B1FDF0802BFB3EA200A3B396 /* Score */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B1FDF07D2BFB3E4D00A3B396 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B1FDF0722BFA6D2800A3B396 /* DictionaryApi.swift */,
+				B1FDF0852BFB64A500A3B396 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B1FDF07E2BFB3E9400A3B396 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B1FDF0892BFB64D600A3B396 /* ViewModels */,
+				B1FDF07F2BFB3E9B00A3B396 /* Views */,
+				B1FDF0792BFB3C7E00A3B396 /* HomeScreen.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B1FDF07F2BFB3E9B00A3B396 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B1FDF0872BFB64BF00A3B396 /* TimerView.swift */,
+				B1FDF08E2BFB726800A3B396 /* WordChallengeView.swift */,
+				B1FDF0982BFB768E00A3B396 /* GameEndedView.swift */,
+				B1FDF0902BFB73B800A3B396 /* DefinitionLoaderView.swift */,
+				B1FDF0962BFB762000A3B396 /* ErrorView.swift */,
+				B1FDF0922BFB73E700A3B396 /* WordDefinitionView.swift */,
+				B1FDF08C2BFB723A00A3B396 /* AppTitleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B1FDF0802BFB3EA200A3B396 /* Score */ = {
+			isa = PBXGroup;
+			children = (
+				B1FDF0812BFB3EA900A3B396 /* Views */,
+				B1FDF07B2BFB3DAF00A3B396 /* ScoreScreen.swift */,
+			);
+			path = Score;
+			sourceTree = "<group>";
+		};
+		B1FDF0812BFB3EA900A3B396 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B1FDF0822BFB3FB400A3B396 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				B1FDF0832BFB3FC600A3B396 /* CardBackground.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		B1FDF0892BFB64D600A3B396 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B1FDF0942BFB747300A3B396 /* HomeScreenViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,9 +263,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1FDF0882BFB64BF00A3B396 /* TimerView.swift in Sources */,
+				B1FDF07C2BFB3DAF00A3B396 /* ScoreScreen.swift in Sources */,
+				B1FDF08D2BFB723A00A3B396 /* AppTitleView.swift in Sources */,
+				B1FDF0952BFB747300A3B396 /* HomeScreenViewModel.swift in Sources */,
+				B1FDF08F2BFB726800A3B396 /* WordChallengeView.swift in Sources */,
+				B1FDF0932BFB73E700A3B396 /* WordDefinitionView.swift in Sources */,
+				B1FDF0762BFB3BB900A3B396 /* Router.swift in Sources */,
+				B1FDF0912BFB73B800A3B396 /* DefinitionLoaderView.swift in Sources */,
+				B1FDF07A2BFB3C7E00A3B396 /* HomeScreen.swift in Sources */,
 				B1FDF0732BFA6D2800A3B396 /* DictionaryApi.swift in Sources */,
 				B1FDF0652BFA5BB500A3B396 /* ContentView.swift in Sources */,
 				B1FDF0632BFA5BB500A3B396 /* WordScrambleApp.swift in Sources */,
+				B1FDF0842BFB3FC600A3B396 /* CardBackground.swift in Sources */,
+				B1FDF0862BFB64A500A3B396 /* Utils.swift in Sources */,
+				B1FDF0992BFB768E00A3B396 /* GameEndedView.swift in Sources */,
+				B1FDF0972BFB762000A3B396 /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
