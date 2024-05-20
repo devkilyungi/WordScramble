@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 
+@MainActor
 class HomeScreenViewModel: ObservableObject {
     
     @Published var usedWords = [String]()
@@ -129,40 +130,32 @@ class HomeScreenViewModel: ObservableObject {
         })
     }
     
-    func fetchDefinition(for word: String) {
+    func fetchDefinition(for word: String) async {
         withAnimation {
             definitionIsLoading = true
             showingDefinition = false
         }
         
-        dictionaryAPI.fetchDefinition(for: word) { result in
-            DispatchQueue.main.async {
-                withAnimation {
-                    self.definitionIsLoading = false
-                }
-                
-                switch result {
-                case .success(let definition):
-                    self.wordToBeDefined = word
-                    self.wordDefinition = definition
-                    withAnimation {
-                        self.showingDefinition = true
-                    }
-                case .failure(let error):
-                    var errorMessage: String
-                    switch error {
-                    case let nsError as NSError:
-                        if nsError.domain == "No definition found" {
-                            errorMessage = "No definition found for '\(word)'"
-                        } else {
-                            errorMessage = nsError.localizedDescription
-                        }
-                    default:
-                        errorMessage = error.localizedDescription
-                    }
-                    self.wordError(message: errorMessage)
-                }
+        do {
+            let definition = try await dictionaryAPI.fetchDefinition(for: word)
+            wordToBeDefined = word
+            wordDefinition = definition
+            withAnimation {
+                definitionIsLoading = false
+                showingDefinition = true
             }
+        } catch {
+            let nsError = error as NSError
+            let errorMessage: String
+            if nsError.domain == "No definition found" {
+                errorMessage = "No definition found for '\(word)'"
+            } else {
+                errorMessage = nsError.localizedDescription
+            }
+            withAnimation {
+                definitionIsLoading = false
+            }
+            wordError(message: errorMessage)
         }
     }
     
