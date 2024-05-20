@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct AppTitleView: View {
+    
+    let parentWidth: CGFloat
+    
     var body: some View {
         HStack {
             Text("WordScramble")
@@ -16,5 +19,6 @@ struct AppTitleView: View {
             
             Spacer()
         }
+        .frame(width: parentWidth * 0.9)
     }
 }

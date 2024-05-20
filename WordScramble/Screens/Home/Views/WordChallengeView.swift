@@ -9,10 +9,7 @@ import SwiftUI
 
 struct WordChallengeView: View {
     
-    @Binding var rootWord: String
-    @Binding var score: Int
     @ObservedObject var viewModel: HomeScreenViewModel
-    let onTap: () -> Void
     let parentWidth: CGFloat
     
     var body: some View {
@@ -30,22 +27,28 @@ struct WordChallengeView: View {
             Spacer().frame(height: parentWidth * 0.045)
             
             HStack {
-                Text(rootWord)
+                Text(viewModel.rootWord)
                     .font(.largeTitle)
                     .fontWeight(.bold)
                 
                 Image(systemName: "info.circle")
-                    .onTapGesture { onTap() }
+                    .onTapGesture {
+                        Task {
+                            await viewModel.fetchDefinition(for: viewModel.rootWord)
+                        }
+                    }
             }
             
             Spacer().frame(height: parentWidth * 0.02)
             
-            Text("Score: \(score)")
+            Text("Score: \(viewModel.score)")
                 .font(.title2)
                 .foregroundColor(.secondary)
             
             TimerView(viewModel: viewModel)
                 .frame(width: parentWidth * 0.9)
         }
+        .frame(width: parentWidth * 0.9, height: (UIApplication.shared.connectedScenes.first as! UIWindowScene).screen.nativeBounds.size.height * 0.09)
+        .cardBackground()
     }
 }

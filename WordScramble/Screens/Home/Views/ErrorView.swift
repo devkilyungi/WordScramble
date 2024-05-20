@@ -38,5 +38,6 @@ struct ErrorView: View {
             
             Spacer().frame(height: parentWidth * 0.05)
         }
+        .frame(width: parentWidth * 0.9)
     }
 }

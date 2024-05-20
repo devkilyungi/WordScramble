@@ -26,6 +26,9 @@
 		B1FDF0952BFB747300A3B396 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0942BFB747300A3B396 /* HomeScreenViewModel.swift */; };
 		B1FDF0972BFB762000A3B396 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0962BFB762000A3B396 /* ErrorView.swift */; };
 		B1FDF0992BFB768E00A3B396 /* GameEndedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0982BFB768E00A3B396 /* GameEndedView.swift */; };
+		B1FDF09B2BFB7F5600A3B396 /* ButtonSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF09A2BFB7F5600A3B396 /* ButtonSelectionView.swift */; };
+		B1FDF09D2BFB7F8500A3B396 /* TextFieldSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF09C2BFB7F8500A3B396 /* TextFieldSectionView.swift */; };
+		B1FDF09F2BFB80E200A3B396 /* UsedWordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF09E2BFB80E200A3B396 /* UsedWordsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,9 @@
 		B1FDF0942BFB747300A3B396 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 		B1FDF0962BFB762000A3B396 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		B1FDF0982BFB768E00A3B396 /* GameEndedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndedView.swift; sourceTree = "<group>"; };
+		B1FDF09A2BFB7F5600A3B396 /* ButtonSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSelectionView.swift; sourceTree = "<group>"; };
+		B1FDF09C2BFB7F8500A3B396 /* TextFieldSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldSectionView.swift; sourceTree = "<group>"; };
+		B1FDF09E2BFB80E200A3B396 /* UsedWordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedWordsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,8 +156,11 @@
 			isa = PBXGroup;
 			children = (
 				B1FDF0872BFB64BF00A3B396 /* TimerView.swift */,
+				B1FDF09A2BFB7F5600A3B396 /* ButtonSelectionView.swift */,
 				B1FDF08E2BFB726800A3B396 /* WordChallengeView.swift */,
 				B1FDF0982BFB768E00A3B396 /* GameEndedView.swift */,
+				B1FDF09E2BFB80E200A3B396 /* UsedWordsView.swift */,
+				B1FDF09C2BFB7F8500A3B396 /* TextFieldSectionView.swift */,
 				B1FDF0902BFB73B800A3B396 /* DefinitionLoaderView.swift */,
 				B1FDF0962BFB762000A3B396 /* ErrorView.swift */,
 				B1FDF0922BFB73E700A3B396 /* WordDefinitionView.swift */,
@@ -263,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1FDF09B2BFB7F5600A3B396 /* ButtonSelectionView.swift in Sources */,
 				B1FDF0882BFB64BF00A3B396 /* TimerView.swift in Sources */,
 				B1FDF07C2BFB3DAF00A3B396 /* ScoreScreen.swift in Sources */,
 				B1FDF08D2BFB723A00A3B396 /* AppTitleView.swift in Sources */,
@@ -271,9 +281,11 @@
 				B1FDF0932BFB73E700A3B396 /* WordDefinitionView.swift in Sources */,
 				B1FDF0762BFB3BB900A3B396 /* Router.swift in Sources */,
 				B1FDF0912BFB73B800A3B396 /* DefinitionLoaderView.swift in Sources */,
+				B1FDF09F2BFB80E200A3B396 /* UsedWordsView.swift in Sources */,
 				B1FDF07A2BFB3C7E00A3B396 /* HomeScreen.swift in Sources */,
 				B1FDF0732BFA6D2800A3B396 /* DictionaryApi.swift in Sources */,
 				B1FDF0652BFA5BB500A3B396 /* ContentView.swift in Sources */,
+				B1FDF09D2BFB7F8500A3B396 /* TextFieldSectionView.swift in Sources */,
 				B1FDF0632BFA5BB500A3B396 /* WordScrambleApp.swift in Sources */,
 				B1FDF0842BFB3FC600A3B396 /* CardBackground.swift in Sources */,
 				B1FDF0862BFB64A500A3B396 /* Utils.swift in Sources */,

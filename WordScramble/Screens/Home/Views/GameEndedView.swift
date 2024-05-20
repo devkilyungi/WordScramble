@@ -9,11 +9,9 @@ import SwiftUI
 
 struct GameEndedView: View {
     
-    @Binding var gameEnded: Bool
-    @Binding var gameStarted: Bool
-    @Binding var shouldFocus: Bool
-    @Binding var score: Int
+    @ObservedObject var viewModel: HomeScreenViewModel
     let parentWidth: CGFloat
+    let parentHeight: CGFloat
     
     var body: some View {
         VStack {
@@ -23,9 +21,9 @@ struct GameEndedView: View {
                 Image(systemName: "xmark")
                     .padding(.trailing)
                     .onTapGesture {
-                        gameEnded = false
-                        gameStarted = false
-                        shouldFocus = false
+                        viewModel.gameEnded = false
+                        viewModel.gameStarted = false
+                        viewModel.shouldFocus = false
                     }
             }
             
@@ -36,9 +34,16 @@ struct GameEndedView: View {
             
             Spacer().frame(height: parentWidth * 0.02)
             
-            Text("Your Score: \(score)")
+            Text("Your Score: \(viewModel.score)")
                 .font(.headline)
                 .foregroundColor(.primary)
         }
+        .transition(.move(edge: .bottom).combined(with: .opacity))
+        .frame(
+            width: parentWidth * 0.65,
+            height: parentHeight * 0.2,
+            alignment: .center
+        )
+        .cardBackground()
     }
 }
