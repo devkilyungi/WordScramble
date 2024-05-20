@@ -8,13 +8,15 @@
 import Foundation
 
 struct WordDefinition: Codable {
-    struct Meaning: Codable {
-        struct Definition: Codable {
-            let definition: String
-        }
-        let definitions: [Definition]
-    }
     let meanings: [Meaning]?
+}
+
+struct Meaning: Codable {
+    let definitions: [Definition]
+}
+
+struct Definition: Codable {
+    let definition: String
 }
 
 struct DictionaryAPI {
