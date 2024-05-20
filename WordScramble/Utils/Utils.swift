@@ -7,12 +7,14 @@
 
 import Foundation
 
-enum GameDuration: Int, CaseIterable {
+enum GameDuration: Int, CaseIterable, Identifiable {
     case blitz = 30
     case regular = 60
     case oneAndHalfMinutes = 90
     case twoMinutes = 120
     case threeMinutes = 180
+    
+    var id: Int { self.rawValue }
     
     var description: String {
         switch self {

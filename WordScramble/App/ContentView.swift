@@ -18,8 +18,8 @@ struct ContentView: View {
                 HomeScreen()
                     .navigationDestination(for: Router.Destination.self) { destination in
                         switch destination {
-                        case .scoreScreen:
-                            ScoreScreen()
+                        case .settings:
+                            SettingsScreen()
                         }
                     }
             }

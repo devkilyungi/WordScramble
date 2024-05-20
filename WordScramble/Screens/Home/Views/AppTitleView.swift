@@ -10,14 +10,22 @@ import SwiftUI
 struct AppTitleView: View {
     
     let parentWidth: CGFloat
+    @EnvironmentObject private var router: Router
     
     var body: some View {
-        HStack {
+        HStack(alignment: .center) {
             Text("WordScramble")
                 .font(.title)
                 .fontWeight(.bold)
             
             Spacer()
+            
+            Button(action: {
+                router.navigate(to: .settings)
+            }) {
+                Image(systemName: "gearshape")
+                    .font(.title2)
+            }
         }
         .frame(width: parentWidth * 0.9)
     }

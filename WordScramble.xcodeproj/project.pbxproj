@@ -15,7 +15,7 @@
 		B1FDF0732BFA6D2800A3B396 /* DictionaryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0722BFA6D2800A3B396 /* DictionaryApi.swift */; };
 		B1FDF0762BFB3BB900A3B396 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0752BFB3BB900A3B396 /* Router.swift */; };
 		B1FDF07A2BFB3C7E00A3B396 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0792BFB3C7E00A3B396 /* HomeScreen.swift */; };
-		B1FDF07C2BFB3DAF00A3B396 /* ScoreScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF07B2BFB3DAF00A3B396 /* ScoreScreen.swift */; };
+		B1FDF07C2BFB3DAF00A3B396 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF07B2BFB3DAF00A3B396 /* SettingsScreen.swift */; };
 		B1FDF0842BFB3FC600A3B396 /* CardBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0832BFB3FC600A3B396 /* CardBackground.swift */; };
 		B1FDF0862BFB64A500A3B396 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0852BFB64A500A3B396 /* Utils.swift */; };
 		B1FDF0882BFB64BF00A3B396 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0872BFB64BF00A3B396 /* TimerView.swift */; };
@@ -41,7 +41,7 @@
 		B1FDF0722BFA6D2800A3B396 /* DictionaryApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryApi.swift; sourceTree = "<group>"; };
 		B1FDF0752BFB3BB900A3B396 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		B1FDF0792BFB3C7E00A3B396 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
-		B1FDF07B2BFB3DAF00A3B396 /* ScoreScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreScreen.swift; sourceTree = "<group>"; };
+		B1FDF07B2BFB3DAF00A3B396 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		B1FDF0832BFB3FC600A3B396 /* CardBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackground.swift; sourceTree = "<group>"; };
 		B1FDF0852BFB64A500A3B396 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B1FDF0872BFB64BF00A3B396 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				B1FDF07E2BFB3E9400A3B396 /* Home */,
-				B1FDF0802BFB3EA200A3B396 /* Score */,
+				B1FDF0802BFB3EA200A3B396 /* Settings */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -169,13 +169,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		B1FDF0802BFB3EA200A3B396 /* Score */ = {
+		B1FDF0802BFB3EA200A3B396 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
 				B1FDF0812BFB3EA900A3B396 /* Views */,
-				B1FDF07B2BFB3DAF00A3B396 /* ScoreScreen.swift */,
+				B1FDF07B2BFB3DAF00A3B396 /* SettingsScreen.swift */,
 			);
-			path = Score;
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		B1FDF0812BFB3EA900A3B396 /* Views */ = {
@@ -274,7 +274,7 @@
 			files = (
 				B1FDF09B2BFB7F5600A3B396 /* ButtonSelectionView.swift in Sources */,
 				B1FDF0882BFB64BF00A3B396 /* TimerView.swift in Sources */,
-				B1FDF07C2BFB3DAF00A3B396 /* ScoreScreen.swift in Sources */,
+				B1FDF07C2BFB3DAF00A3B396 /* SettingsScreen.swift in Sources */,
 				B1FDF08D2BFB723A00A3B396 /* AppTitleView.swift in Sources */,
 				B1FDF0952BFB747300A3B396 /* HomeScreenViewModel.swift in Sources */,
 				B1FDF08F2BFB726800A3B396 /* WordChallengeView.swift in Sources */,
