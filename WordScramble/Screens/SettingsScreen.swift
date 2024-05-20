@@ -33,7 +33,7 @@ struct SettingsScreen: View {
                     ), in: 6...12, step: 1)
                 }
                 
-                Picker("Timer Length", selection: $selectedDuration) {
+                Picker("Timer Length", selection: $viewModel.gameDuration) {
                     ForEach(GameDuration.allCases) { duration in
                         Text(duration.description).tag(duration)
                     }

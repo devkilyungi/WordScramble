@@ -32,13 +32,9 @@ class HomeScreenViewModel: ObservableObject {
     
     private var timer: AnyCancellable?
     @Published var selectedTimeRemaining: Int = GameDuration.oneAndHalfMinutes.rawValue
+    @Published var gameDuration: GameDuration = .oneAndHalfMinutes
     
     let dictionaryAPI = DictionaryAPI()
-    
-    // Function to update time remaining
-    func updateTimeRemaining(to newTimeRemaining: Int) {
-        selectedTimeRemaining = newTimeRemaining
-    }
     
     func isValidWord(_ word: String, language: String = "en") -> Bool {
         let checker = UITextChecker()
@@ -188,7 +184,7 @@ class HomeScreenViewModel: ObservableObject {
     }
     
     func startTimer() {
-        selectedTimeRemaining = GameDuration.oneAndHalfMinutes.rawValue
+        selectedTimeRemaining = gameDuration.rawValue
         timer = Timer.publish(every: 1, on: .main, in: .common)
             .autoconnect()
             .sink { [weak self] _ in
