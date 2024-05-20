@@ -9,12 +9,15 @@ import SwiftUI
 
 @main
 struct WordScrambleApp: App {
+    
     @StateObject var router = Router()
+    @StateObject private var mainViewModel = HomeScreenViewModel()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(router)
+                .environmentObject(mainViewModel)
         }
     }
 }

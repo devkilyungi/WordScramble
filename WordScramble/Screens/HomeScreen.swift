@@ -9,7 +9,8 @@ import SwiftUI
 
 struct HomeScreen: View {
     
-    @StateObject private var viewModel = HomeScreenViewModel()
+    @EnvironmentObject private var viewModel: HomeScreenViewModel
+    
     @FocusState var isTextFieldFocused: Bool
     @State var randomWord: String?
     let wordDatabase = WordDatabase()
@@ -20,7 +21,10 @@ struct HomeScreen: View {
             ZStack {
                 VStack {
                     ScrollView {
-                        AppTitleView(parentWidth: geo.size.width)
+                        AppTitleView(
+                            viewModel: viewModel,
+                            parentWidth: geo.size.width
+                        )
                         
                         WordChallengeView(
                             viewModel: viewModel,
@@ -90,8 +94,8 @@ struct HomeScreen: View {
                 }
             }
         }
-        .onChange(of: viewModel.timeRemaining, {
-            if viewModel.timeRemaining == 0 {
+        .onChange(of: viewModel.selectedTimeRemaining, {
+            if viewModel.selectedTimeRemaining == 0 {
                 withAnimation {
                     viewModel.gameEnded = true
                 }

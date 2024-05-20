@@ -143,8 +143,10 @@
 		B1FDF0782BFB3C6500A3B396 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				B1FDF07E2BFB3E9400A3B396 /* Home */,
-				B1FDF0802BFB3EA200A3B396 /* Settings */,
+				B1FDF0792BFB3C7E00A3B396 /* HomeScreen.swift */,
+				B1FDF07B2BFB3DAF00A3B396 /* SettingsScreen.swift */,
+				B1FDF0892BFB64D600A3B396 /* ViewModels */,
+				B1FDF07F2BFB3E9B00A3B396 /* Views */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -156,16 +158,6 @@
 				B1FDF0852BFB64A500A3B396 /* Utils.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		B1FDF07E2BFB3E9400A3B396 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				B1FDF0892BFB64D600A3B396 /* ViewModels */,
-				B1FDF07F2BFB3E9B00A3B396 /* Views */,
-				B1FDF0792BFB3C7E00A3B396 /* HomeScreen.swift */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		B1FDF07F2BFB3E9B00A3B396 /* Views */ = {
@@ -181,22 +173,6 @@
 				B1FDF0962BFB762000A3B396 /* ErrorView.swift */,
 				B1FDF0922BFB73E700A3B396 /* WordDefinitionView.swift */,
 				B1FDF08C2BFB723A00A3B396 /* AppTitleView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		B1FDF0802BFB3EA200A3B396 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				B1FDF0812BFB3EA900A3B396 /* Views */,
-				B1FDF07B2BFB3DAF00A3B396 /* SettingsScreen.swift */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
-		B1FDF0812BFB3EA900A3B396 /* Views */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = Views;
 			sourceTree = "<group>";

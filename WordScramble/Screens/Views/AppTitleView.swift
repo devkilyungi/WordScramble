@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AppTitleView: View {
     
+    @ObservedObject var viewModel = HomeScreenViewModel()
     let parentWidth: CGFloat
     @EnvironmentObject private var router: Router
     
