@@ -11,12 +11,13 @@ struct ButtonSelectionView: View {
     
     @ObservedObject var viewModel = HomeScreenViewModel()
     let parentWidth: CGFloat
+    let focusAction: () -> Void
     
     var body: some View {
         HStack {
             Button(action: {
                 viewModel.gameStarted = true
-                viewModel.shouldFocus = true
+                focusAction()
                 viewModel.startGame()
             }) {
                 Label("New Game", systemImage: "arrowtriangle.right.circle")
@@ -31,7 +32,7 @@ struct ButtonSelectionView: View {
             
             Button(action:{
                 viewModel.gameStarted = true
-                viewModel.shouldFocus = true
+                focusAction()
                 viewModel.restartGame()
             }) {
                 Label("Restart Game", systemImage: "arrow.circlepath")

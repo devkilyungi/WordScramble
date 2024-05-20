@@ -40,11 +40,28 @@ struct HomeScreen: View {
                             )
                         }
                         
-                        ButtonSelectionView(viewModel: viewModel, parentWidth: geo.size.width)
+                        ButtonSelectionView(
+                            viewModel: viewModel,
+                            parentWidth: geo.size.width,
+                            focusAction: {
+                                setFocus(true)
+                            }
+                        )
                         
                         Spacer().frame(height: geo.size.width * 0.05)
                         
-                        TextFieldSectionView(viewModel: viewModel, parentWidth: geo.size.width, isTextFieldFocused: _isTextFieldFocused)
+                        TextFieldSectionView(
+                            viewModel: viewModel,
+                            parentWidth: geo.size.width,
+                            isTextFieldFocused: _isTextFieldFocused,
+                            onSubmit: {
+                                viewModel.addNewWord()
+                                setFocus(false)
+                            },
+                            focusAction: {
+                                setFocus(false)
+                            }
+                        )
                         
                         Spacer().frame(height: geo.size.width * 0.05)
                         
@@ -71,10 +88,6 @@ struct HomeScreen: View {
                 }
             }
         }
-        .onSubmit {
-            viewModel.addNewWord()
-            viewModel.shouldFocus = false
-        }
         .onChange(of: viewModel.timeRemaining, {
             if viewModel.timeRemaining == 0 {
                 withAnimation {
@@ -94,4 +107,13 @@ struct HomeScreen: View {
 
 #Preview {
     HomeScreen()
+}
+
+extension HomeScreen {
+    func setFocus(_ shouldFocus: Bool) {
+        withAnimation {
+            viewModel.shouldFocus = shouldFocus
+            isTextFieldFocused = shouldFocus
+        }
+    }
 }

@@ -12,6 +12,8 @@ struct TextFieldSectionView: View {
     @ObservedObject var viewModel = HomeScreenViewModel()
     let parentWidth: CGFloat
     @FocusState var isTextFieldFocused: Bool
+    let onSubmit: () -> Void
+    let focusAction: () -> Void
     
     var body: some View {
         HStack {
@@ -23,6 +25,7 @@ struct TextFieldSectionView: View {
                 .textInputAutocapitalization(.never)
                 .focused($isTextFieldFocused, equals: true)
                 .disabled(!viewModel.gameStarted || viewModel.gameEnded)
+                .onSubmit { onSubmit() }
         }
         .frame(width: parentWidth * 0.9)
         .overlay(
@@ -34,7 +37,7 @@ struct TextFieldSectionView: View {
                 Spacer()
                 Button("Quit") {
                     viewModel.quitGame()
-                    isTextFieldFocused = false
+                    focusAction()
                 }
             }
         }
