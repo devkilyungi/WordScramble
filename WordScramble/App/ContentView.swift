@@ -20,6 +20,10 @@ struct ContentView: View {
                         switch destination {
                         case .settings:
                             SettingsScreen()
+                        case .history:
+                            HistoryScreen()
+                        case .profile:
+                            UserProfile()
                         }
                     }
             }

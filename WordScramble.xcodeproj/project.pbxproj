@@ -37,6 +37,8 @@
 		B1FDF0B12BFBCE4800A3B396 /* words_6.json in Resources */ = {isa = PBXBuildFile; fileRef = B1FDF0AA2BFBCE4700A3B396 /* words_6.json */; };
 		B1FDF0B22BFBCE4800A3B396 /* words_10.json in Resources */ = {isa = PBXBuildFile; fileRef = B1FDF0AB2BFBCE4700A3B396 /* words_10.json */; };
 		B1FDF0B32BFBCE4800A3B396 /* words_11.json in Resources */ = {isa = PBXBuildFile; fileRef = B1FDF0AC2BFBCE4700A3B396 /* words_11.json */; };
+		B1FDF0B52BFBE2A700A3B396 /* HistoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0B42BFBE2A700A3B396 /* HistoryScreen.swift */; };
+		B1FDF0B72BFBE4F400A3B396 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0B62BFBE4F400A3B396 /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		B1FDF0AA2BFBCE4700A3B396 /* words_6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words_6.json; sourceTree = "<group>"; };
 		B1FDF0AB2BFBCE4700A3B396 /* words_10.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words_10.json; sourceTree = "<group>"; };
 		B1FDF0AC2BFBCE4700A3B396 /* words_11.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words_11.json; sourceTree = "<group>"; };
+		B1FDF0B42BFBE2A700A3B396 /* HistoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryScreen.swift; sourceTree = "<group>"; };
+		B1FDF0B62BFBE4F400A3B396 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,8 @@
 			children = (
 				B1FDF0792BFB3C7E00A3B396 /* HomeScreen.swift */,
 				B1FDF07B2BFB3DAF00A3B396 /* SettingsScreen.swift */,
+				B1FDF0B62BFBE4F400A3B396 /* UserProfile.swift */,
+				B1FDF0B42BFBE2A700A3B396 /* HistoryScreen.swift */,
 				B1FDF0892BFB64D600A3B396 /* ViewModels */,
 				B1FDF07F2BFB3E9B00A3B396 /* Views */,
 			);
@@ -304,8 +310,10 @@
 				B1FDF07A2BFB3C7E00A3B396 /* HomeScreen.swift in Sources */,
 				B1FDF0732BFA6D2800A3B396 /* DictionaryApi.swift in Sources */,
 				B1FDF0652BFA5BB500A3B396 /* ContentView.swift in Sources */,
+				B1FDF0B52BFBE2A700A3B396 /* HistoryScreen.swift in Sources */,
 				B1FDF09D2BFB7F8500A3B396 /* TextFieldSectionView.swift in Sources */,
 				B1FDF0A52BFBC80A00A3B396 /* WordDatabase.swift in Sources */,
+				B1FDF0B72BFBE4F400A3B396 /* UserProfile.swift in Sources */,
 				B1FDF0632BFA5BB500A3B396 /* WordScrambleApp.swift in Sources */,
 				B1FDF0842BFB3FC600A3B396 /* CardBackground.swift in Sources */,
 				B1FDF0862BFB64A500A3B396 /* Utils.swift in Sources */,

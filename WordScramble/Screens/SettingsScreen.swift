@@ -10,84 +10,102 @@ import SwiftUI
 struct SettingsScreen: View {
     
     @EnvironmentObject private var viewModel: HomeScreenViewModel
+    @EnvironmentObject private var router: Router
     
     @State private var selectedDuration: GameDuration = .oneAndHalfMinutes
     @State private var showProfile: Bool = false
+    
     let appVersion = "1.0.0"
     
     var body: some View {
         Form {
-            Section(header: Text("Game Settings")) {
-                VStack(alignment: .leading) {
-                    Text("Word Length: \(viewModel.wordSize.rawValue)")
-                    
-                    Slider(value: Binding(
-                        get: { Double(viewModel.wordSize.rawValue) },
-                        set: {
-                            if let length = WordLength(rawValue: Int($0)) {
-                                viewModel.wordSize = length
-                                UserDefaults.standard.set(length.rawValue, forKey: "WordSize")
-                            } else {
-                                print("Not a valid enum raw value")
-                            }
-                        }
-                    ), in: 6...12, step: 1)
-                }
-                
-                Picker("Timer Length", selection: $viewModel.gameDuration) {
-                    ForEach(GameDuration.allCases) { duration in
-                        Text(duration.description).tag(duration)
-                    }
-                }
-                .onChange(of: viewModel.gameDuration, {
-                    UserDefaults.standard.set(viewModel.gameDuration.rawValue, forKey: "GameDuration")
-                })
-                
-                Text("Changes will reflect when you start a new game.")
-                    .foregroundColor(.gray)
-                    .font(.caption)
-            }
-            
-            Section(header: Text("Profile")) {
-                Button(action: {
-                    showProfile.toggle()
-                }) {
-                    HStack {
-                        Image(systemName: "person.circle")
-                        Text("User Profile")
-                    }
-                }
-                .sheet(isPresented: $showProfile) {
-                    UserProfileView()
-                }
-            }
-            
-            Section(header: Text("App Information")) {
-                HStack {
-                    Text("App Version")
-                    Spacer()
-                    Text(appVersion)
-                        .foregroundColor(.gray)
-                }
-            }
+            gameSettingsSection
+            historySection
+            profileSection
+            appInformationSection
         }
         .navigationTitle("Settings")
     }
-}
-
-struct UserProfileView: View {
-    var body: some View {
-        VStack {
-            Text("User Profile")
-                .font(.largeTitle)
-                .padding()
+    
+    private var gameSettingsSection: some View {
+        Section(header: Text("Game Settings")) {
+            VStack(alignment: .leading) {
+                Text("Word Length: \(viewModel.wordSize.rawValue)")
+                
+                Slider(value: Binding(
+                    get: { Double(viewModel.wordSize.rawValue) },
+                    set: {
+                        if let length = WordLength(rawValue: Int($0)) {
+                            viewModel.wordSize = length
+                            UserDefaults.standard.set(length.rawValue, forKey: "WordSize")
+                        } else {
+                            print("Not a valid enum raw value")
+                        }
+                    }
+                ), in: 6...12, step: 1)
+            }
             
-            // User profile details can be added here
-            Text("Username: ExampleUser")
-            Text("Email: example@example.com")
+            Picker("Timer Length", selection: $viewModel.gameDuration) {
+                ForEach(GameDuration.allCases) { duration in
+                    Text(duration.description).tag(duration)
+                }
+            }
+            .onChange(of: viewModel.gameDuration, {
+                UserDefaults.standard.set(viewModel.gameDuration.rawValue, forKey: "GameDuration")
+            })
             
-            Spacer()
+            Text("Changes will reflect when you start a new game.")
+                .foregroundColor(.gray)
+                .font(.caption)
         }
-        .padding()
+    }
+    
+    private var historySection: some View {
+        Section(header: Text("History")) {
+            Button(action: {
+                router.navigate(to: .history)
+            }) {
+                HStack {
+                    Image(systemName: "clock.arrow.circlepath")
+                    
+                    Text("View My History")
+                    
+                    Spacer()
+                    
+                    Image(systemName: "chevron.forward")
+                }
+            }
+            .tint(.primary)
+        }
+    }
+    
+    private var profileSection: some View {
+        Section(header: Text("Profile")) {
+            Button(action: {
+                router.navigate(to: .profile)
+            }) {
+                HStack {
+                    Image(systemName: "person.circle")
+                    
+                    Text("User Profile")
+                    
+                    Spacer()
+                    
+                    Image(systemName: "chevron.forward")
+                }
+            }
+            .tint(.primary)
+        }
+    }
+    
+    private var appInformationSection: some View {
+        Section(header: Text("App Information")) {
+            HStack {
+                Text("App Version")
+                Spacer()
+                Text(appVersion)
+                    .foregroundColor(.gray)
+            }
+        }
     }
 }
