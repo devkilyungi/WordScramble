@@ -26,6 +26,7 @@ struct SettingsScreen: View {
                         set: {
                             if let length = WordLength(rawValue: Int($0)) {
                                 viewModel.wordSize = length
+                                UserDefaults.standard.set(length.rawValue, forKey: "WordSize")
                             } else {
                                 print("Not a valid enum raw value")
                             }
@@ -38,6 +39,9 @@ struct SettingsScreen: View {
                         Text(duration.description).tag(duration)
                     }
                 }
+                .onChange(of: viewModel.gameDuration, {
+                    UserDefaults.standard.set(viewModel.gameDuration.rawValue, forKey: "GameDuration")
+                })
                 
                 Text("Changes will reflect when you start a new game.")
                     .foregroundColor(.gray)

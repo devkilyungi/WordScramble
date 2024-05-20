@@ -36,6 +36,24 @@ class HomeScreenViewModel: ObservableObject {
     
     let dictionaryAPI = DictionaryAPI()
     
+    init() {
+        if let storedGameDuration = UserDefaults.standard.value(forKey: "GameDuration") as? Int,
+           let gameDuration = GameDuration(rawValue: storedGameDuration) {
+            self.gameDuration = gameDuration
+            self.selectedTimeRemaining = self.gameDuration.rawValue
+        } else {
+            self.gameDuration = .oneAndHalfMinutes
+            self.selectedTimeRemaining = self.gameDuration.rawValue
+        }
+        
+        if let storedWordSize = UserDefaults.standard.value(forKey: "WordSize") as? Int,
+           let wordSize = WordLength(rawValue: storedWordSize) {
+            self.wordSize = wordSize
+        } else {
+            self.wordSize = .eight
+        }
+    }
+    
     func isValidWord(_ word: String, language: String = "en") -> Bool {
         let checker = UITextChecker()
         let range = NSRange(location: 0, length: word.utf16.count)
