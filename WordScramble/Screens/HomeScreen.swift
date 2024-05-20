@@ -15,8 +15,9 @@ struct HomeScreen: View {
     @State var randomWord: String?
     let wordDatabase = WordDatabase()
     
+    @State private var isDatabasePreloaded = false
+    
     var body: some View {
-        
         GeometryReader { geo in
             ZStack {
                 VStack {
@@ -94,6 +95,15 @@ struct HomeScreen: View {
                 }
             }
         }
+        .onAppear {
+            // Preload the database
+            if !isDatabasePreloaded {
+                DispatchQueue.global().async {
+                    preloadDatabase()
+                    isDatabasePreloaded = true
+                }
+            }
+        }
         .onChange(of: viewModel.selectedTimeRemaining, {
             if viewModel.selectedTimeRemaining == 0 {
                 withAnimation {
@@ -109,6 +119,12 @@ struct HomeScreen: View {
             }
         })
     }
+    
+    func preloadDatabase() {
+            let wordDatabase = WordDatabase()
+            // Fetch a random word to preload the database
+            _ = wordDatabase.getRandomWord(from: "\(viewModel.wordSize.wordForm)_letter_words")
+        }
 }
 
 #Preview {
