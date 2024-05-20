@@ -11,7 +11,6 @@
 		B1FDF0652BFA5BB500A3B396 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0642BFA5BB500A3B396 /* ContentView.swift */; };
 		B1FDF0672BFA5BB800A3B396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FDF0662BFA5BB800A3B396 /* Assets.xcassets */; };
 		B1FDF06A2BFA5BB800A3B396 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FDF0692BFA5BB800A3B396 /* Preview Assets.xcassets */; };
-		B1FDF0712BFA613B00A3B396 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = B1FDF0702BFA613B00A3B396 /* start.txt */; };
 		B1FDF0732BFA6D2800A3B396 /* DictionaryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0722BFA6D2800A3B396 /* DictionaryApi.swift */; };
 		B1FDF0762BFB3BB900A3B396 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0752BFB3BB900A3B396 /* Router.swift */; };
 		B1FDF07A2BFB3C7E00A3B396 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0792BFB3C7E00A3B396 /* HomeScreen.swift */; };
@@ -29,6 +28,15 @@
 		B1FDF09B2BFB7F5600A3B396 /* ButtonSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF09A2BFB7F5600A3B396 /* ButtonSelectionView.swift */; };
 		B1FDF09D2BFB7F8500A3B396 /* TextFieldSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF09C2BFB7F8500A3B396 /* TextFieldSectionView.swift */; };
 		B1FDF09F2BFB80E200A3B396 /* UsedWordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF09E2BFB80E200A3B396 /* UsedWordsView.swift */; };
+		B1FDF0A32BFBC71B00A3B396 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = B1FDF0A22BFBC71B00A3B396 /* SQLite */; };
+		B1FDF0A52BFBC80A00A3B396 /* WordDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0A42BFBC80A00A3B396 /* WordDatabase.swift */; };
+		B1FDF0AD2BFBCE4800A3B396 /* words_12.json in Resources */ = {isa = PBXBuildFile; fileRef = B1FDF0A62BFBCE4700A3B396 /* words_12.json */; };
+		B1FDF0AE2BFBCE4800A3B396 /* words_9.json in Resources */ = {isa = PBXBuildFile; fileRef = B1FDF0A72BFBCE4700A3B396 /* words_9.json */; };
+		B1FDF0AF2BFBCE4800A3B396 /* words_7.json in Resources */ = {isa = PBXBuildFile; fileRef = B1FDF0A82BFBCE4700A3B396 /* words_7.json */; };
+		B1FDF0B02BFBCE4800A3B396 /* words_8.json in Resources */ = {isa = PBXBuildFile; fileRef = B1FDF0A92BFBCE4700A3B396 /* words_8.json */; };
+		B1FDF0B12BFBCE4800A3B396 /* words_6.json in Resources */ = {isa = PBXBuildFile; fileRef = B1FDF0AA2BFBCE4700A3B396 /* words_6.json */; };
+		B1FDF0B22BFBCE4800A3B396 /* words_10.json in Resources */ = {isa = PBXBuildFile; fileRef = B1FDF0AB2BFBCE4700A3B396 /* words_10.json */; };
+		B1FDF0B32BFBCE4800A3B396 /* words_11.json in Resources */ = {isa = PBXBuildFile; fileRef = B1FDF0AC2BFBCE4700A3B396 /* words_11.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +45,6 @@
 		B1FDF0642BFA5BB500A3B396 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B1FDF0662BFA5BB800A3B396 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1FDF0692BFA5BB800A3B396 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B1FDF0702BFA613B00A3B396 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 		B1FDF0722BFA6D2800A3B396 /* DictionaryApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryApi.swift; sourceTree = "<group>"; };
 		B1FDF0752BFB3BB900A3B396 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		B1FDF0792BFB3C7E00A3B396 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -55,6 +62,14 @@
 		B1FDF09A2BFB7F5600A3B396 /* ButtonSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSelectionView.swift; sourceTree = "<group>"; };
 		B1FDF09C2BFB7F8500A3B396 /* TextFieldSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldSectionView.swift; sourceTree = "<group>"; };
 		B1FDF09E2BFB80E200A3B396 /* UsedWordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedWordsView.swift; sourceTree = "<group>"; };
+		B1FDF0A42BFBC80A00A3B396 /* WordDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDatabase.swift; sourceTree = "<group>"; };
+		B1FDF0A62BFBCE4700A3B396 /* words_12.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words_12.json; sourceTree = "<group>"; };
+		B1FDF0A72BFBCE4700A3B396 /* words_9.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words_9.json; sourceTree = "<group>"; };
+		B1FDF0A82BFBCE4700A3B396 /* words_7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words_7.json; sourceTree = "<group>"; };
+		B1FDF0A92BFBCE4700A3B396 /* words_8.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words_8.json; sourceTree = "<group>"; };
+		B1FDF0AA2BFBCE4700A3B396 /* words_6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words_6.json; sourceTree = "<group>"; };
+		B1FDF0AB2BFBCE4700A3B396 /* words_10.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words_10.json; sourceTree = "<group>"; };
+		B1FDF0AC2BFBCE4700A3B396 /* words_11.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words_11.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1FDF0A32BFBC71B00A3B396 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +103,7 @@
 		B1FDF0612BFA5BB500A3B396 /* WordScramble */ = {
 			isa = PBXGroup;
 			children = (
+				B1FDF0A02BFBC24F00A3B396 /* Database */,
 				B1FDF0822BFB3FB400A3B396 /* ViewModifiers */,
 				B1FDF0772BFB3C4900A3B396 /* App */,
 				B1FDF0662BFA5BB800A3B396 /* Assets.xcassets */,
@@ -101,7 +118,6 @@
 		B1FDF0682BFA5BB800A3B396 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				B1FDF0702BFA613B00A3B396 /* start.txt */,
 				B1FDF0692BFA5BB800A3B396 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -201,6 +217,21 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		B1FDF0A02BFBC24F00A3B396 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				B1FDF0AA2BFBCE4700A3B396 /* words_6.json */,
+				B1FDF0A82BFBCE4700A3B396 /* words_7.json */,
+				B1FDF0A92BFBCE4700A3B396 /* words_8.json */,
+				B1FDF0A72BFBCE4700A3B396 /* words_9.json */,
+				B1FDF0AB2BFBCE4700A3B396 /* words_10.json */,
+				B1FDF0AC2BFBCE4700A3B396 /* words_11.json */,
+				B1FDF0A62BFBCE4700A3B396 /* words_12.json */,
+				B1FDF0A42BFBC80A00A3B396 /* WordDatabase.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -217,6 +248,9 @@
 			dependencies = (
 			);
 			name = WordScramble;
+			packageProductDependencies = (
+				B1FDF0A22BFBC71B00A3B396 /* SQLite */,
+			);
 			productName = WordScramble;
 			productReference = B1FDF05F2BFA5BB500A3B396 /* WordScramble.app */;
 			productType = "com.apple.product-type.application";
@@ -245,6 +279,9 @@
 				Base,
 			);
 			mainGroup = B1FDF0562BFA5BB500A3B396;
+			packageReferences = (
+				B1FDF0A12BFBC71B00A3B396 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
 			productRefGroup = B1FDF0602BFA5BB500A3B396 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +296,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1FDF0B12BFBCE4800A3B396 /* words_6.json in Resources */,
+				B1FDF0AE2BFBCE4800A3B396 /* words_9.json in Resources */,
 				B1FDF06A2BFA5BB800A3B396 /* Preview Assets.xcassets in Resources */,
-				B1FDF0712BFA613B00A3B396 /* start.txt in Resources */,
+				B1FDF0B22BFBCE4800A3B396 /* words_10.json in Resources */,
+				B1FDF0B32BFBCE4800A3B396 /* words_11.json in Resources */,
+				B1FDF0B02BFBCE4800A3B396 /* words_8.json in Resources */,
+				B1FDF0AF2BFBCE4800A3B396 /* words_7.json in Resources */,
+				B1FDF0AD2BFBCE4800A3B396 /* words_12.json in Resources */,
 				B1FDF0672BFA5BB800A3B396 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +329,7 @@
 				B1FDF0732BFA6D2800A3B396 /* DictionaryApi.swift in Sources */,
 				B1FDF0652BFA5BB500A3B396 /* ContentView.swift in Sources */,
 				B1FDF09D2BFB7F8500A3B396 /* TextFieldSectionView.swift in Sources */,
+				B1FDF0A52BFBC80A00A3B396 /* WordDatabase.swift in Sources */,
 				B1FDF0632BFA5BB500A3B396 /* WordScrambleApp.swift in Sources */,
 				B1FDF0842BFB3FC600A3B396 /* CardBackground.swift in Sources */,
 				B1FDF0862BFB64A500A3B396 /* Utils.swift in Sources */,
@@ -429,8 +473,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,8 +501,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -494,6 +538,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B1FDF0A12BFBC71B00A3B396 /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.15.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B1FDF0A22BFBC71B00A3B396 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1FDF0A12BFBC71B00A3B396 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B1FDF0572BFA5BB500A3B396 /* Project object */;
 }

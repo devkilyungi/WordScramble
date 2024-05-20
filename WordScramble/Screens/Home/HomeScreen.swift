@@ -11,6 +11,8 @@ struct HomeScreen: View {
     
     @StateObject private var viewModel = HomeScreenViewModel()
     @FocusState var isTextFieldFocused: Bool
+    @State var randomWord: String?
+    let wordDatabase = WordDatabase()
     
     var body: some View {
         

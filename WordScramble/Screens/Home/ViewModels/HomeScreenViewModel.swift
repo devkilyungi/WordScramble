@@ -34,21 +34,36 @@ class HomeScreenViewModel: ObservableObject {
     
     let dictionaryAPI = DictionaryAPI()
     
+    func isValidWord(_ word: String, language: String = "en") -> Bool {
+        let checker = UITextChecker()
+        let range = NSRange(location: 0, length: word.utf16.count)
+        let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: language)
+        return misspelledRange.location == NSNotFound
+    }
+    
     func startGame() {
-        if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
-            if let startWords = try? String(contentsOf: startWordsURL) {
-                let allWords = startWords.components(separatedBy: "\n")
-                rootWord = allWords.randomElement() ?? "silkworm"
-                withAnimation {
-                    usedWords = []
-                }
-                newWord = ""
-                score = 0
-                startTimer()
-                return
-            }
+        // Attempt to fetch a random word from the database
+        let wordDatabase = WordDatabase()
+        var randomWord: String?
+        while randomWord == nil || !isValidWord(randomWord!) {
+            randomWord = wordDatabase.getRandomWord(from: "eight_letter_words")
         }
-        fatalError("Could not load start.txt from bundle.")
+        
+        // Assign the fetched random word to the rootWord property
+        guard let validRandomWord = randomWord else {
+            fatalError("Could not fetch a valid random word from the database.")
+        }
+        rootWord = validRandomWord
+        
+        // Reset other game-related properties
+        withAnimation {
+            usedWords = []
+            newWord = ""
+            score = 0
+        }
+        
+        // Start the game timer
+        startTimer()
     }
     
     func quitGame() {
