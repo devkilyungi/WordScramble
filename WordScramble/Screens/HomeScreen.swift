@@ -118,6 +118,11 @@ struct HomeScreen: View {
                 isTextFieldFocused = false
             }
         })
+        .onChange(of: viewModel.gameEnded, {
+            if viewModel.gameEnded {
+                viewModel.saveGameHistory()
+            }
+        })
     }
     
     func preloadDatabase() {
@@ -129,6 +134,7 @@ struct HomeScreen: View {
 
 #Preview {
     HomeScreen()
+        .environmentObject(HomeScreenViewModel())
 }
 
 extension HomeScreen {

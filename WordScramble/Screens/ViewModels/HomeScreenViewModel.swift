@@ -34,6 +34,8 @@ class HomeScreenViewModel: ObservableObject {
     @Published var selectedTimeRemaining: Int = GameDuration.oneAndHalfMinutes.rawValue
     @Published var gameDuration: GameDuration = .oneAndHalfMinutes
     
+    @Published var highScore: Int = UserDefaults.standard.integer(forKey: "HighScore")
+    
     let dictionaryAPI = DictionaryAPI()
     
     init() {
@@ -52,6 +54,37 @@ class HomeScreenViewModel: ObservableObject {
         } else {
             self.wordSize = .eight
         }
+    }
+    
+    func saveGameHistory() {
+        let gameHistory = GameHistory(
+            rootWord: rootWord,
+            score: score,
+            duration: gameDuration.rawValue,
+            date: Date(),
+            isHighScore: score > highScore
+        )
+        
+        // Save high score if necessary
+        if score > highScore {
+            highScore = score
+            UserDefaults.standard.set(highScore, forKey: "HighScore")
+        }
+        
+        // Save game history
+        var history = fetchGameHistory()
+        history.append(gameHistory)
+        if let encoded = try? JSONEncoder().encode(history) {
+            UserDefaults.standard.set(encoded, forKey: "GameHistory")
+        }
+    }
+    
+    func fetchGameHistory() -> [GameHistory] {
+        if let savedHistory = UserDefaults.standard.data(forKey: "GameHistory"),
+           let decodedHistory = try? JSONDecoder().decode([GameHistory].self, from: savedHistory) {
+            return decodedHistory
+        }
+        return []
     }
     
     func isValidWord(_ word: String, language: String = "en") -> Bool {

@@ -53,3 +53,12 @@ enum WordLength: Int {
         }
     }
 }
+
+extension DateFormatter {
+    static var historyFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        return formatter
+    }
+}
