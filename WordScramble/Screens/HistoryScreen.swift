@@ -14,7 +14,7 @@ struct GameHistory: Codable, Identifiable {
     let score: Int
     let duration: Int
     let date: Date
-    let isHighScore: Bool
+    var isHighScore: Bool
 }
 
 struct HistoryScreen: View {
@@ -27,10 +27,10 @@ struct HistoryScreen: View {
             if history.isEmpty {
                 emptyHistoryView
             } else {
-                historyListView(history: history)
+                ScrollView {
+                    historyListView(history: history)
+                }
             }
-            
-            Spacer()
         }
         .navigationTitle("Game History")
     }
@@ -56,7 +56,9 @@ struct HistoryScreen: View {
     }
     
     private func historyListView(history: [GameHistory]) -> some View {
-        ForEach(history, id: \.id) { game in
+        let sortedHistory = history.sorted { $0.isHighScore && !$1.isHighScore }
+        
+        return ForEach(sortedHistory, id: \.id) { game in
             VStack(alignment: .leading, spacing: 10) {
                 HStack {
                     Text("Challenge:")
@@ -77,7 +79,7 @@ struct HistoryScreen: View {
                 HStack {
                     Text("Timer:")
                         .font(.headline)
-
+                    
                     Text("\(styleTime(for: game.duration))")
                         .font(.body)
                     

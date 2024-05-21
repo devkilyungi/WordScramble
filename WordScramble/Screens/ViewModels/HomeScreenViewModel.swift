@@ -57,23 +57,36 @@ class HomeScreenViewModel: ObservableObject {
     }
     
     func saveGameHistory() {
-        let gameHistory = GameHistory(
-            rootWord: rootWord,
-            score: score,
-            duration: gameDuration.rawValue,
-            date: Date(),
-            isHighScore: score > highScore
-        )
+        let isHighScore = score > highScore
         
         // Save high score if necessary
-        if score > highScore {
+        if isHighScore {
             highScore = score
             UserDefaults.standard.set(highScore, forKey: "HighScore")
         }
         
         // Save game history
         var history = fetchGameHistory()
+        
+        // Mark all previous entries as not high scores if this is a new high score
+        if isHighScore {
+            for i in 0..<history.count {
+                history[i].isHighScore = false
+            }
+        }
+        
+        // Append the new game history entry
+        let gameHistory = GameHistory(
+            rootWord: rootWord,
+            score: score,
+            duration: gameDuration.rawValue,
+            date: Date(),
+            isHighScore: isHighScore
+        )
+        
         history.append(gameHistory)
+        
+        // Save the updated history to UserDefaults
         if let encoded = try? JSONEncoder().encode(history) {
             UserDefaults.standard.set(encoded, forKey: "GameHistory")
         }
