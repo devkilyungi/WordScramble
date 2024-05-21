@@ -20,8 +20,8 @@ struct HomeScreen: View {
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                VStack {
-                    ScrollView {
+                ScrollView {
+                    VStack {
                         AppTitleView(
                             viewModel: viewModel,
                             parentWidth: geo.size.width
@@ -80,11 +80,9 @@ struct HomeScreen: View {
                         }
                         
                         UsedWordsView(viewModel: viewModel, parentWidth: geo.size.width)
-                        
-                        Spacer()
                     }
                 }
-                .frame(height: geo.size.height)
+                .frame(width: geo.size.width, height: geo.size.height)
                 
                 if viewModel.gameEnded {
                     GameEndedView(

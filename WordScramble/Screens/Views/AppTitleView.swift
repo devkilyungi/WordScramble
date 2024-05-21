@@ -15,7 +15,7 @@ struct AppTitleView: View {
     
     var body: some View {
         HStack(alignment: .center) {
-            Text("WordScramble")
+            Text("Scramble")
                 .font(.title)
                 .fontWeight(.bold)
             
