@@ -22,8 +22,6 @@ struct ContentView: View {
                             SettingsScreen()
                         case .history:
                             HistoryScreen()
-                        case .profile:
-                            UserProfile()
                         }
                     }
             }

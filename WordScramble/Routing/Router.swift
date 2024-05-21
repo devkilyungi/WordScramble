@@ -13,7 +13,6 @@ final class Router: ObservableObject {
     public enum Destination: Codable, Hashable {
         case settings
         case history
-        case profile
     }
     
     func navigate(to destination: Destination) {

@@ -21,14 +21,13 @@ struct SettingsScreen: View {
         Form {
             gameSettingsSection
             historySection
-            profileSection
             appInformationSection
         }
         .navigationTitle("Settings")
     }
     
     private var gameSettingsSection: some View {
-        Section(header: Text("Game Settings")) {
+        Section(header: Text("Preferences")) {
             VStack(alignment: .leading) {
                 Text("Word Length: \(viewModel.wordSize.rawValue)")
                 
@@ -69,25 +68,6 @@ struct SettingsScreen: View {
                     Image(systemName: "clock.arrow.circlepath")
                     
                     Text("View My History")
-                    
-                    Spacer()
-                    
-                    Image(systemName: "chevron.forward")
-                }
-            }
-            .tint(.primary)
-        }
-    }
-    
-    private var profileSection: some View {
-        Section(header: Text("Profile")) {
-            Button(action: {
-                router.navigate(to: .profile)
-            }) {
-                HStack {
-                    Image(systemName: "person.circle")
-                    
-                    Text("User Profile")
                     
                     Spacer()
                     
