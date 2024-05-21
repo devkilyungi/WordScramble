@@ -124,10 +124,9 @@ struct HomeScreen: View {
     }
     
     func preloadDatabase() {
-            let wordDatabase = WordDatabase()
-            // Fetch a random word to preload the database
-            _ = wordDatabase.getRandomWord(from: "\(viewModel.wordSize.wordForm)_letter_words")
-        }
+        let wordDatabase = WordDatabase()
+        wordDatabase.loadWordsIfNeeded()
+    }
 }
 
 #Preview {

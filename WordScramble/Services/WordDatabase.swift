@@ -10,19 +10,19 @@ import SQLite
 
 class WordDatabase {
     private var db: Connection?
-
+    
     init() {
         setupDatabase()
         createTablesIfNeeded()
         loadWordsIfNeeded()
     }
-
+    
     private func setupDatabase() {
         let fileManager = FileManager.default
         if let documentDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first {
-            let databaseURL = documentDirectory.appendingPathComponent("words.sqlite3")
+            let databaseURL = documentDirectory.appendingPathComponent("scramble_words.sqlite3")
             if !fileManager.fileExists(atPath: databaseURL.path) {
-                if let bundleURL = Bundle.main.url(forResource: "words", withExtension: "sqlite3") {
+                if let bundleURL = Bundle.main.url(forResource: "scramble_words", withExtension: "sqlite3") {
                     // Copy pre-populated database from the app bundle to the documents directory
                     try? fileManager.copyItem(at: bundleURL, to: databaseURL)
                 }
@@ -30,7 +30,7 @@ class WordDatabase {
             db = try? Connection(databaseURL.path)
         }
     }
-
+    
     private func createTablesIfNeeded() {
         guard let db = db else { return }
         
@@ -57,7 +57,7 @@ class WordDatabase {
             }
         }
     }
-
+    
     private func loadWords(from filename: String, startIndex: Int, batchSize: Int) -> [String]? {
         guard let path = Bundle.main.path(forResource: filename, ofType: "json") else { return nil }
         do {
@@ -70,8 +70,8 @@ class WordDatabase {
             return nil
         }
     }
-
-    private func loadWordsIfNeeded() {
+    
+    func loadWordsIfNeeded() {
         guard let db = db else { return }
         
         do {
@@ -89,11 +89,9 @@ class WordDatabase {
                 let table = Table(tableName)
                 let wordColumn = Expression<String>("word")
                 
-                // Check if the table is already populated
-                let count = try db.scalar(table.count)
-                if count == 0, let words = loadWords(from: "words_\(length)", startIndex: 0, batchSize: 5) {
+                if let words = loadWords(from: "words_\(length)", startIndex: 0, batchSize: 50) {
                     for word in words {
-                        // Insert words into the table if it's empty
+                        // Insert words into the table
                         try db.run(table.insert(or: .ignore, wordColumn <- word))
                     }
                 }
@@ -102,7 +100,7 @@ class WordDatabase {
             print("Error loading words: \(error)")
         }
     }
-
+    
     func getRandomWord(from tableName: String) -> String? {
         guard let db = db else { return nil }
         
