@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TimerView: View {
-    @ObservedObject var viewModel: HomeScreenViewModel
+    @ObservedObject var viewModel: MainViewModel
     
     var body: some View {
         HStack {

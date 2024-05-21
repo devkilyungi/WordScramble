@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WordChallengeView: View {
     
-    @ObservedObject var viewModel: HomeScreenViewModel
+    @ObservedObject var viewModel: MainViewModel
     let parentWidth: CGFloat
     
     var body: some View {

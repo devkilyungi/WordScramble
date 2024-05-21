@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GameEndedView: View {
     
-    @ObservedObject var viewModel: HomeScreenViewModel
+    @ObservedObject var viewModel: MainViewModel
     let parentWidth: CGFloat
     let parentHeight: CGFloat
     

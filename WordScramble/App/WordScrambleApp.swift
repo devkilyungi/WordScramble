@@ -11,7 +11,7 @@ import SwiftUI
 struct WordScrambleApp: App {
     
     @StateObject var router = Router()
-    @StateObject private var mainViewModel = HomeScreenViewModel()
+    @StateObject private var mainViewModel = MainViewModel()
     
     var body: some Scene {
         WindowGroup {

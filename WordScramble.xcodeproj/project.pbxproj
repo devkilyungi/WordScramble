@@ -22,7 +22,7 @@
 		B1FDF08F2BFB726800A3B396 /* WordChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF08E2BFB726800A3B396 /* WordChallengeView.swift */; };
 		B1FDF0912BFB73B800A3B396 /* DefinitionLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0902BFB73B800A3B396 /* DefinitionLoaderView.swift */; };
 		B1FDF0932BFB73E700A3B396 /* WordDefinitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0922BFB73E700A3B396 /* WordDefinitionView.swift */; };
-		B1FDF0952BFB747300A3B396 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0942BFB747300A3B396 /* HomeScreenViewModel.swift */; };
+		B1FDF0952BFB747300A3B396 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0942BFB747300A3B396 /* MainViewModel.swift */; };
 		B1FDF0972BFB762000A3B396 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0962BFB762000A3B396 /* ErrorView.swift */; };
 		B1FDF0992BFB768E00A3B396 /* GameEndedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0982BFB768E00A3B396 /* GameEndedView.swift */; };
 		B1FDF09B2BFB7F5600A3B396 /* ButtonSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF09A2BFB7F5600A3B396 /* ButtonSelectionView.swift */; };
@@ -57,7 +57,7 @@
 		B1FDF08E2BFB726800A3B396 /* WordChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordChallengeView.swift; sourceTree = "<group>"; };
 		B1FDF0902BFB73B800A3B396 /* DefinitionLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionLoaderView.swift; sourceTree = "<group>"; };
 		B1FDF0922BFB73E700A3B396 /* WordDefinitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDefinitionView.swift; sourceTree = "<group>"; };
-		B1FDF0942BFB747300A3B396 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		B1FDF0942BFB747300A3B396 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B1FDF0962BFB762000A3B396 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		B1FDF0982BFB768E00A3B396 /* GameEndedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndedView.swift; sourceTree = "<group>"; };
 		B1FDF09A2BFB7F5600A3B396 /* ButtonSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSelectionView.swift; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 		B1FDF0892BFB64D600A3B396 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				B1FDF0942BFB747300A3B396 /* HomeScreenViewModel.swift */,
+				B1FDF0942BFB747300A3B396 /* MainViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -298,7 +298,7 @@
 				B1FDF0882BFB64BF00A3B396 /* TimerView.swift in Sources */,
 				B1FDF07C2BFB3DAF00A3B396 /* SettingsScreen.swift in Sources */,
 				B1FDF08D2BFB723A00A3B396 /* AppTitleView.swift in Sources */,
-				B1FDF0952BFB747300A3B396 /* HomeScreenViewModel.swift in Sources */,
+				B1FDF0952BFB747300A3B396 /* MainViewModel.swift in Sources */,
 				B1FDF08F2BFB726800A3B396 /* WordChallengeView.swift in Sources */,
 				B1FDF0932BFB73E700A3B396 /* WordDefinitionView.swift in Sources */,
 				B1FDF0762BFB3BB900A3B396 /* Router.swift in Sources */,

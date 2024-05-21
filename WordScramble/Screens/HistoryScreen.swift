@@ -18,7 +18,7 @@ struct GameHistory: Codable, Identifiable {
 }
 
 struct HistoryScreen: View {
-    @EnvironmentObject private var viewModel: HomeScreenViewModel
+    @EnvironmentObject private var viewModel: MainViewModel
     
     var body: some View {
         VStack {

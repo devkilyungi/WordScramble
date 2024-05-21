@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 @MainActor
-class HomeScreenViewModel: ObservableObject {
+class MainViewModel: ObservableObject {
     
     @Published var usedWords = [String]()
     @Published var rootWord = "Scramble"

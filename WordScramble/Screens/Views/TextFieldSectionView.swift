@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TextFieldSectionView: View {
     
-    @ObservedObject var viewModel = HomeScreenViewModel()
+    @ObservedObject var viewModel = MainViewModel()
     let parentWidth: CGFloat
     @FocusState var isTextFieldFocused: Bool
     let onSubmit: () -> Void

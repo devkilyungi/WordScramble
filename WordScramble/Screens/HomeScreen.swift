@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeScreen: View {
     
-    @EnvironmentObject private var viewModel: HomeScreenViewModel
+    @EnvironmentObject private var viewModel: MainViewModel
     
     @FocusState var isTextFieldFocused: Bool
     @State var randomWord: String?
@@ -132,7 +132,7 @@ struct HomeScreen: View {
 
 #Preview {
     HomeScreen()
-        .environmentObject(HomeScreenViewModel())
+        .environmentObject(MainViewModel())
 }
 
 extension HomeScreen {

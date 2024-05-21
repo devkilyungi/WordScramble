@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingsScreen: View {
     
-    @EnvironmentObject private var viewModel: HomeScreenViewModel
+    @EnvironmentObject private var viewModel: MainViewModel
     @EnvironmentObject private var router: Router
     
     @State private var selectedDuration: GameDuration = .oneAndHalfMinutes

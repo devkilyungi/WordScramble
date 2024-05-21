@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ButtonSelectionView: View {
     
-    @ObservedObject var viewModel = HomeScreenViewModel()
+    @ObservedObject var viewModel = MainViewModel()
     let parentWidth: CGFloat
     let focusAction: () -> Void
     
