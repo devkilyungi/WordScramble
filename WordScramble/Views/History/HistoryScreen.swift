@@ -7,16 +7,6 @@
 
 import SwiftUI
 
-
-struct GameHistory: Codable, Identifiable {
-    var id = UUID()
-    let rootWord: String
-    let score: Int
-    let duration: Int
-    let date: Date
-    var isHighScore: Bool
-}
-
 struct HistoryScreen: View {
     @EnvironmentObject private var viewModel: MainViewModel
     

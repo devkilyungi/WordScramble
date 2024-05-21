@@ -23,6 +23,7 @@ class WordDatabase {
             let databaseURL = documentDirectory.appendingPathComponent("words.sqlite3")
             if !fileManager.fileExists(atPath: databaseURL.path) {
                 if let bundleURL = Bundle.main.url(forResource: "words", withExtension: "sqlite3") {
+                    // Copy pre-populated database from the app bundle to the documents directory
                     try? fileManager.copyItem(at: bundleURL, to: databaseURL)
                 }
             }
@@ -92,6 +93,7 @@ class WordDatabase {
                 let count = try db.scalar(table.count)
                 if count == 0, let words = loadWords(from: "words_\(length)", startIndex: 0, batchSize: 5) {
                     for word in words {
+                        // Insert words into the table if it's empty
                         try db.run(table.insert(or: .ignore, wordColumn <- word))
                     }
                 }
