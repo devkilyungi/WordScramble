@@ -26,4 +26,6 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environmentObject(Router())
+        .environmentObject(MainViewModel())
 }

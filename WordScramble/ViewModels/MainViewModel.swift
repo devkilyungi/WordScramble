@@ -239,7 +239,7 @@ class MainViewModel: ObservableObject {
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
         
         guard answer.count > 1 else {
-            wordError(message: "You can't have a one letter or blank word!")
+            wordError(message: "You can't have a one letter word or blank word!")
             return nil
         }
         

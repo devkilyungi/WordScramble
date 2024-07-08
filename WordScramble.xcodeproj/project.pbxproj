@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B1C6B83A2C3BEE5C00EB6CF7 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C6B8372C3BEE5C00EB6CF7 /* AppConstants.swift */; };
+		B1C6B83B2C3BEE5C00EB6CF7 /* SpacerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C6B8382C3BEE5C00EB6CF7 /* SpacerConstants.swift */; };
 		B1FDF0632BFA5BB500A3B396 /* WordScrambleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0622BFA5BB500A3B396 /* WordScrambleApp.swift */; };
 		B1FDF0652BFA5BB500A3B396 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0642BFA5BB500A3B396 /* ContentView.swift */; };
 		B1FDF0672BFA5BB800A3B396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FDF0662BFA5BB800A3B396 /* Assets.xcassets */; };
@@ -17,17 +19,7 @@
 		B1FDF07C2BFB3DAF00A3B396 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF07B2BFB3DAF00A3B396 /* SettingsScreen.swift */; };
 		B1FDF0842BFB3FC600A3B396 /* CardBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0832BFB3FC600A3B396 /* CardBackground.swift */; };
 		B1FDF0862BFB64A500A3B396 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0852BFB64A500A3B396 /* Utils.swift */; };
-		B1FDF0882BFB64BF00A3B396 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0872BFB64BF00A3B396 /* TimerView.swift */; };
-		B1FDF08D2BFB723A00A3B396 /* AppTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF08C2BFB723A00A3B396 /* AppTitleView.swift */; };
-		B1FDF08F2BFB726800A3B396 /* WordChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF08E2BFB726800A3B396 /* WordChallengeView.swift */; };
-		B1FDF0912BFB73B800A3B396 /* DefinitionLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0902BFB73B800A3B396 /* DefinitionLoaderView.swift */; };
-		B1FDF0932BFB73E700A3B396 /* WordDefinitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0922BFB73E700A3B396 /* WordDefinitionView.swift */; };
 		B1FDF0952BFB747300A3B396 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0942BFB747300A3B396 /* MainViewModel.swift */; };
-		B1FDF0972BFB762000A3B396 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0962BFB762000A3B396 /* ErrorView.swift */; };
-		B1FDF0992BFB768E00A3B396 /* GameEndedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0982BFB768E00A3B396 /* GameEndedView.swift */; };
-		B1FDF09B2BFB7F5600A3B396 /* ButtonSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF09A2BFB7F5600A3B396 /* ButtonSelectionView.swift */; };
-		B1FDF09D2BFB7F8500A3B396 /* TextFieldSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF09C2BFB7F8500A3B396 /* TextFieldSectionView.swift */; };
-		B1FDF09F2BFB80E200A3B396 /* UsedWordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF09E2BFB80E200A3B396 /* UsedWordsView.swift */; };
 		B1FDF0A32BFBC71B00A3B396 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = B1FDF0A22BFBC71B00A3B396 /* SQLite */; };
 		B1FDF0A52BFBC80A00A3B396 /* WordDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FDF0A42BFBC80A00A3B396 /* WordDatabase.swift */; };
 		B1FDF0AD2BFBCE4800A3B396 /* words_12.json in Resources */ = {isa = PBXBuildFile; fileRef = B1FDF0A62BFBCE4700A3B396 /* words_12.json */; };
@@ -44,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B1C6B8372C3BEE5C00EB6CF7 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		B1C6B8382C3BEE5C00EB6CF7 /* SpacerConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpacerConstants.swift; sourceTree = "<group>"; };
 		B1FDF05F2BFA5BB500A3B396 /* WordScramble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordScramble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FDF0622BFA5BB500A3B396 /* WordScrambleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScrambleApp.swift; sourceTree = "<group>"; };
 		B1FDF0642BFA5BB500A3B396 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,17 +49,7 @@
 		B1FDF07B2BFB3DAF00A3B396 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		B1FDF0832BFB3FC600A3B396 /* CardBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackground.swift; sourceTree = "<group>"; };
 		B1FDF0852BFB64A500A3B396 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		B1FDF0872BFB64BF00A3B396 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
-		B1FDF08C2BFB723A00A3B396 /* AppTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTitleView.swift; sourceTree = "<group>"; };
-		B1FDF08E2BFB726800A3B396 /* WordChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordChallengeView.swift; sourceTree = "<group>"; };
-		B1FDF0902BFB73B800A3B396 /* DefinitionLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionLoaderView.swift; sourceTree = "<group>"; };
-		B1FDF0922BFB73E700A3B396 /* WordDefinitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDefinitionView.swift; sourceTree = "<group>"; };
 		B1FDF0942BFB747300A3B396 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		B1FDF0962BFB762000A3B396 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
-		B1FDF0982BFB768E00A3B396 /* GameEndedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndedView.swift; sourceTree = "<group>"; };
-		B1FDF09A2BFB7F5600A3B396 /* ButtonSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSelectionView.swift; sourceTree = "<group>"; };
-		B1FDF09C2BFB7F8500A3B396 /* TextFieldSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldSectionView.swift; sourceTree = "<group>"; };
-		B1FDF09E2BFB80E200A3B396 /* UsedWordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedWordsView.swift; sourceTree = "<group>"; };
 		B1FDF0A42BFBC80A00A3B396 /* WordDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDatabase.swift; sourceTree = "<group>"; };
 		B1FDF0A62BFBCE4700A3B396 /* words_12.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words_12.json; sourceTree = "<group>"; };
 		B1FDF0A72BFBCE4700A3B396 /* words_9.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words_9.json; sourceTree = "<group>"; };
@@ -92,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B1C6B8392C3BEE5C00EB6CF7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B1C6B8372C3BEE5C00EB6CF7 /* AppConstants.swift */,
+				B1C6B8382C3BEE5C00EB6CF7 /* SpacerConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		B1FDF0562BFA5BB500A3B396 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +104,7 @@
 		B1FDF0612BFA5BB500A3B396 /* WordScramble */ = {
 			isa = PBXGroup;
 			children = (
+				B1C6B8392C3BEE5C00EB6CF7 /* Constants */,
 				B1FDF0662BFA5BB800A3B396 /* Assets.xcassets */,
 				B1FDF0642BFA5BB500A3B396 /* ContentView.swift */,
 				B1FDF0BA2BFC8CCE00A3B396 /* Models */,
@@ -149,23 +143,6 @@
 				B1FDF0852BFB64A500A3B396 /* Utils.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		B1FDF07F2BFB3E9B00A3B396 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				B1FDF0872BFB64BF00A3B396 /* TimerView.swift */,
-				B1FDF09A2BFB7F5600A3B396 /* ButtonSelectionView.swift */,
-				B1FDF08E2BFB726800A3B396 /* WordChallengeView.swift */,
-				B1FDF0982BFB768E00A3B396 /* GameEndedView.swift */,
-				B1FDF09E2BFB80E200A3B396 /* UsedWordsView.swift */,
-				B1FDF09C2BFB7F8500A3B396 /* TextFieldSectionView.swift */,
-				B1FDF0902BFB73B800A3B396 /* DefinitionLoaderView.swift */,
-				B1FDF0962BFB762000A3B396 /* ErrorView.swift */,
-				B1FDF0922BFB73E700A3B396 /* WordDefinitionView.swift */,
-				B1FDF08C2BFB723A00A3B396 /* AppTitleView.swift */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		B1FDF0822BFB3FB400A3B396 /* ViewModifiers */ = {
@@ -221,7 +198,6 @@
 		B1FDF0C22BFC8D6500A3B396 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				B1FDF07F2BFB3E9B00A3B396 /* Components */,
 				B1FDF0792BFB3C7E00A3B396 /* HomeScreen.swift */,
 			);
 			path = Home;
@@ -335,29 +311,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1FDF09B2BFB7F5600A3B396 /* ButtonSelectionView.swift in Sources */,
-				B1FDF0882BFB64BF00A3B396 /* TimerView.swift in Sources */,
 				B1FDF07C2BFB3DAF00A3B396 /* SettingsScreen.swift in Sources */,
-				B1FDF08D2BFB723A00A3B396 /* AppTitleView.swift in Sources */,
 				B1FDF0952BFB747300A3B396 /* MainViewModel.swift in Sources */,
-				B1FDF08F2BFB726800A3B396 /* WordChallengeView.swift in Sources */,
-				B1FDF0932BFB73E700A3B396 /* WordDefinitionView.swift in Sources */,
 				B1FDF0762BFB3BB900A3B396 /* Router.swift in Sources */,
-				B1FDF0912BFB73B800A3B396 /* DefinitionLoaderView.swift in Sources */,
-				B1FDF09F2BFB80E200A3B396 /* UsedWordsView.swift in Sources */,
 				B1FDF07A2BFB3C7E00A3B396 /* HomeScreen.swift in Sources */,
 				B1FDF0732BFA6D2800A3B396 /* DictionaryApi.swift in Sources */,
 				B1FDF0652BFA5BB500A3B396 /* ContentView.swift in Sources */,
+				B1C6B83B2C3BEE5C00EB6CF7 /* SpacerConstants.swift in Sources */,
 				B1FDF0B52BFBE2A700A3B396 /* HistoryScreen.swift in Sources */,
-				B1FDF09D2BFB7F8500A3B396 /* TextFieldSectionView.swift in Sources */,
 				B1FDF0A52BFBC80A00A3B396 /* WordDatabase.swift in Sources */,
 				B1FDF0632BFA5BB500A3B396 /* WordScrambleApp.swift in Sources */,
 				B1FDF0C02BFC8D2A00A3B396 /* WordLength.swift in Sources */,
 				B1FDF0842BFB3FC600A3B396 /* CardBackground.swift in Sources */,
+				B1C6B83A2C3BEE5C00EB6CF7 /* AppConstants.swift in Sources */,
 				B1FDF0BC2BFC8CE700A3B396 /* GameHistory.swift in Sources */,
 				B1FDF0862BFB64A500A3B396 /* Utils.swift in Sources */,
-				B1FDF0992BFB768E00A3B396 /* GameEndedView.swift in Sources */,
-				B1FDF0972BFB762000A3B396 /* ErrorView.swift in Sources */,
 				B1FDF0BE2BFC8D1000A3B396 /* GameDuration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
